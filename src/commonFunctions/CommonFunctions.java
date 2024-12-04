@@ -46,4 +46,13 @@ public class CommonFunctions {
         }
         return matrix;
     }
+
+    public static void print2DArray(int[][] matrix, int n, int m) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 }
