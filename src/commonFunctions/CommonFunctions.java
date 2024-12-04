@@ -31,8 +31,19 @@ public class CommonFunctions {
 
     public static void print1DArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]+ " ");
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
+    }
+
+    public static int[][] create2DArray(int n, int m) {
+        int[][] matrix = new int[n][m];
+        System.out.println("Enter the matrix value of size " + n + " X " + m + ":- ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                matrix[i][j] = getInt();
+            }
+        }
+        return matrix;
     }
 }
