@@ -1,5 +1,6 @@
 package commonFunctions;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CommonFunctions {
@@ -69,5 +70,13 @@ public class CommonFunctions {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+    }
+
+    public static ArrayList<Integer> create1DArrayList(int size) {
+        ArrayList<Integer> arrayList = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            arrayList.add(getInt());
+        }
+        return arrayList;
     }
 }
