@@ -57,6 +57,14 @@ public class CommonFunctions {
         }
     }
 
+    public static void print2DArrayInLine(int[][] matrix, int n, int m) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+        }
+    }
+
     public static String[] create1DArrayString(int size) {
         String[] arr = new String[size];
         sc.nextLine();
