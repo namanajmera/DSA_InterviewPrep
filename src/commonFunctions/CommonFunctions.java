@@ -72,6 +72,12 @@ public class CommonFunctions {
         arr[j] = temp;
     }
 
+    public static void swapArrayList(ArrayList<Integer> arr, int i, int j) {
+        int temp = arr.get(i);
+        arr.set(i,arr.get(j));
+        arr.set(j,temp);
+    }
+
     public static ArrayList<Integer> create1DArrayList(int size) {
         ArrayList<Integer> arrayList = new ArrayList<>(size);
         for (int i = 0; i < size; i++) {
