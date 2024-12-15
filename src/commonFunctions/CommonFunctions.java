@@ -82,8 +82,8 @@ public class CommonFunctions {
 
     public static void swapArrayList(ArrayList<Integer> arr, int i, int j) {
         int temp = arr.get(i);
-        arr.set(i,arr.get(j));
-        arr.set(j,temp);
+        arr.set(i, arr.get(j));
+        arr.set(j, temp);
     }
 
     public static ArrayList<Integer> create1DArrayList(int size) {
@@ -99,5 +99,17 @@ public class CommonFunctions {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
+    }
+
+    public static ArrayList<ArrayList<Integer>> create2DArrayList(int n, int n1) {
+        ArrayList<ArrayList<Integer>> arrayList = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            ArrayList<Integer> arrayList1 = new ArrayList<>();
+            for (int j = 0; j < n; j++) {
+                arrayList1.add(getInt());
+            }
+            arrayList.add(arrayList1);
+        }
+        return arrayList;
     }
 }
