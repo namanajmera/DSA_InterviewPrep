@@ -105,7 +105,7 @@ public class CommonFunctions {
         ArrayList<ArrayList<Integer>> arrayList = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             ArrayList<Integer> arrayList1 = new ArrayList<>();
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < n1; j++) {
                 arrayList1.add(getInt());
             }
             arrayList.add(arrayList1);
