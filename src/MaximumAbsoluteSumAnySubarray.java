@@ -4,7 +4,7 @@ public class MaximumAbsoluteSumAnySubarray {
     public static void main(String[] args) {
         int size = CommonFunctions.getInt();
         int[] nums = CommonFunctions.create1DArray(size);
-        int result = maxAbsoluteSum(nums);
+        int result = maxAbsoluteSum2(nums);
         System.out.println(result);
     }
 
@@ -23,5 +23,15 @@ public class MaximumAbsoluteSumAnySubarray {
             }
         }
         return Math.max(Math.abs(minSum), maxSum);
+    }
+
+    private static int maxAbsoluteSum2(int[] nums) {
+        int maxPrefixSum = 0, minPrefixSum = 0, sum = 0;
+        for (int num : nums) {
+            sum += num;
+            maxPrefixSum = Math.max(maxPrefixSum, sum);
+            minPrefixSum = Math.min(minPrefixSum, sum);
+        }
+        return maxPrefixSum - minPrefixSum;
     }
 }
